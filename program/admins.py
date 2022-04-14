@@ -24,7 +24,7 @@ bcl = InlineKeyboardMarkup(
 )
 
 
-@Client.on_message(command(["reload", f"reload@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["تحديث", f"reload@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
 async def update_admin(client, message):
     global admins
@@ -38,7 +38,7 @@ async def update_admin(client, message):
     )
 
 
-@Client.on_message(command(["skip", f"skip@{BOT_USERNAME}", "vskip"]) & other_filters)
+@Client.on_message(command(["تخطي", f"skip@{BOT_USERNAME}", "تخطي ف"]) & other_filters)
 @authorized_users_only
 async def skip(client, m: Message):
 
@@ -89,7 +89,7 @@ async def skip(client, m: Message):
 
 
 @Client.on_message(
-    command(["stop", f"stop@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME}", "vstop"])
+    command(["ايقاف", f"stop@{BOT_USERNAME}", "stop", f"stop@{BOT_USERNAME}", "ايقاف"])
     & other_filters
 )
 @authorized_users_only
@@ -107,7 +107,7 @@ async def stop(client, m: Message):
 
 
 @Client.on_message(
-    command(["pause", f"pause@{BOT_USERNAME}", "vpause"]) & other_filters
+    command(["توقف", f"pause@{BOT_USERNAME}", "توقف"]) & other_filters
 )
 @authorized_users_only
 async def pause(client, m: Message):
@@ -125,7 +125,7 @@ async def pause(client, m: Message):
 
 
 @Client.on_message(
-    command(["resume", f"resume@{BOT_USERNAME}", "vresume"]) & other_filters
+    command(["توقف بث", f"resume@{BOT_USERNAME}", "توقف بث"]) & other_filters
 )
 @authorized_users_only
 async def resume(client, m: Message):
@@ -143,7 +143,7 @@ async def resume(client, m: Message):
 
 
 @Client.on_message(
-    command(["mute", f"mute@{BOT_USERNAME}", "vmute"]) & other_filters
+    command(["كتم", f"mute@{BOT_USERNAME}", "كتم"]) & other_filters
 )
 @authorized_users_only
 async def mute(client, m: Message):
@@ -152,7 +152,7 @@ async def mute(client, m: Message):
         try:
             await call_py.mute_stream(chat_id)
             await m.reply(
-                "🔇 **تم كتم الصوت**\n\n• **لرفع الكتم استخدم**\n» /unmute الامر"
+                "🔇 **تم كتم الصوت**\n\n• **لرفع الكتم استخدم**\n» /الغاء كتم  الامر"
             )
         except Exception as e:
             await m.reply(f"🚫 **خطاء:**\n\n`{e}`")
@@ -161,7 +161,7 @@ async def mute(client, m: Message):
 
 
 @Client.on_message(
-    command(["unmute", f"unmute@{BOT_USERNAME}", "vunmute"]) & other_filters
+    command(["الغاء كتم", f"unmute@{BOT_USERNAME}", "الغاء كتم"]) & other_filters
 )
 @authorized_users_only
 async def unmute(client, m: Message):
@@ -278,7 +278,7 @@ async def cbunmute(_, query: CallbackQuery):
 
 
 @Client.on_message(
-    command(["volume", f"volume@{BOT_USERNAME}", "vol"]) & other_filters
+    command(["الصوت", f"volume@{BOT_USERNAME}", "الصوت"]) & other_filters
 )
 @authorized_users_only
 async def change_volume(client, m: Message):
