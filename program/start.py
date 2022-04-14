@@ -82,7 +82,7 @@ async def start_(client: Client, message: Message):
 
 
 @Client.on_message(
-    command(["معلومات ", f"معلومات@{BOT_USERNAME}"]) & filters.group & ~filters.edited
+    command(["معلومات", f"معلومات@{BOT_USERNAME}"]) & filters.group & ~filters.edited
 )
 async def alive(client: Client, message: Message):
     current_time = datetime.utcnow()
