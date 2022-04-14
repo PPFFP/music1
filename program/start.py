@@ -69,20 +69,11 @@ async def start_(client: Client, message: Message):
                 [InlineKeyboardButton("• طريقة الاستخدام •", callback_data="cbhowtouse")],
                 [
                     InlineKeyboardButton("• الاوامر •", callback_data="cbbasic"),
-                    InlineKeyboardButton("• المطور •", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("♕ Dev Bot ", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "• قروب الدعم •", url=f"https://t.me/{GROUP_SUPPORT}"
-                    ),
-                    InlineKeyboardButton(
-                        "𝐬𝐨𝐮𝐫𝐜𝐞 𝐚𝐥𝐚𝐳𝐢𝐳a²¹🐼", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "دبـدو໑بـٰههہ⁽💕🐾₎⇡", url="https://t.me/BANDA2M"
-                    )
+                        "✿ Br Team", url=f"https://t.me/{GROUP_SUPPORT}"),
                 ],
             ]
         ),
@@ -91,7 +82,7 @@ async def start_(client: Client, message: Message):
 
 
 @Client.on_message(
-    command(["alive", f"alive@{BOT_USERNAME}"]) & filters.group & ~filters.edited
+    command(["معلومات ", f"معلومات@{BOT_USERNAME}"]) & filters.group & ~filters.edited
 )
 async def alive(client: Client, message: Message):
     current_time = datetime.utcnow()
@@ -101,9 +92,8 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("دبـدو໑بـٰههہ⁽💕🐾₎⇡", url=f"https://t.me/BANDA2M"),
                 InlineKeyboardButton(
-                    "𝐬𝐨𝐮𝐫𝐜𝐞 𝐚𝐥𝐚𝐳𝐢𝐳a²¹🐼", url=f"https://t.me/BANDA1M"
+                    "༺BR TEAM༻", url=f"https://t.me/v00r22"
                 ),
             ]
         ]
