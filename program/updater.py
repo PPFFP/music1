@@ -63,11 +63,11 @@ async def update_repo(_, message: Message):
     await msg.edit("bot is **up-to-date** with [main](https://github.com/)", disable_web_page_preview=True)
 
 
-@Client.on_message(command(["restart", f"restart@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["تحديث البوت", f"restart@{BOT_USERNAME}"]) & ~filters.edited)
 @sudo_users_only
 async def restart_bot(_, message: Message):
     msg = await message.reply("`restarting bot...`")
     args = [sys.executable, "main.py"]
-    await msg.edit("✅ bot restarted\n\n• now you can use this bot again.")
+    await msg.edit("✅ تم تحديث البوت\n\n• تستطيع استخدمه الان بشكل طبيعي .")
     execle(sys.executable, *args, environ)
     return
